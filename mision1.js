@@ -76,3 +76,41 @@ function likes(num){
 
 
 // Ejercicio 4
+function generarCodigo(str){
+    let arr = str.split(" ");
+    let code = "";
+
+        arr.forEach(element => {
+            if(element === "") {
+                code += ""
+            }
+            else{
+                code += element[0] + element[1]
+            }
+        });
+    
+    return code;
+}
+console.log(generarCodigo("hola mundo")) // "homu"
+console.log(generarCodigo("juan david berbeo")) // "judabe"
+console.log(generarCodigo("")) // ""
+
+
+// function generateCodigo(text) {
+//     let code = "";
+//     let words = text.split(" ");
+  
+//     words.forEach((word) => {
+//       if (word.length >= 2) {
+//         code += word.slice(0, 2);
+//       } else if (word.length > 0) {
+//         code += word[0];
+//       }
+//     });
+  
+//     return code;
+//   }
+
+//   console.log(generateCodigo("hola mundo")) // "homu"
+// console.log(generateCodigo("juan david berbeo")) // "judabe"
+// console.log(generateCodigo("")) // ""
